@@ -1,81 +1,86 @@
 # AppShelf · 本机应用清单
 
-把电脑里装了什么、装在哪、做什么用，整理成一本可以翻的目录。
+把电脑里装了什么、装在哪、做什么用、占多大，整理成一本可以翻的目录——自带桌面 App，可编辑、能感知软件的新装与卸载。
 
-纯静态、零依赖、离线可用。数据来自 `data/apps.json`，运行 `scripts/scan.ps1` 可重新扫描本机。
+## 快速开始
 
----
+### 方式一：桌面 App（推荐）
 
-## 特性
+双击运行打包好的应用：
 
-- **一键扫描**：PowerShell 脚本读取注册表卸载项，自动生成清单
-- **作用标注**：每条应用附作用说明，不再是冷冰冰的程序名
-- **目录视图**：大编号 + 应用名 + 作用 + 完整路径，像一本目录册
-- **搜索 / 筛选**：按名称、作用、路径、类别过滤
-- **复制路径**：每条路径一键复制
-- **零依赖**：纯 HTML + CSS + JS，不联网也能打开
-- **可分享**：把 `apps.json` 发给别人，对方打开 `index.html` 就能看
-
-## 使用
-
-### 1. 查看清单
-
-直接用浏览器打开 `index.html` 即可。
-
-> ⚠️ 由于使用了 `fetch` 加载 JSON，**需要通过本地服务器打开**，不能直接双击 `file://`。
-> 最简单的方式（任选其一）：
->
-> ```powershell
-> # Python
-> python -m http.server 8000
->
-> # 或 Node
-> npx serve .
-> ```
->
-> 然后访问 `http://localhost:8000`。
-
-### 2. 扫描你自己的机器
-
-```powershell
-cd scripts
-powershell -ExecutionPolicy Bypass -File scan.ps1
+```
+dist/AppShelf/AppShelf.exe
 ```
 
-会生成 `scripts/apps.json`，把它复制到 `data/apps.json` 覆盖即可。
+无需安装 Python、无需开浏览器，双击即开原生窗口。编辑、定位文件夹、时效扫描全部可用。
 
-扫描结果默认只含 `name / publisher / version / path`，`category` 和 `description` 留空，可手动补全类别与作用说明。
+> 想自己重新打包：`pip install pywebview pyinstaller`，然后 `pyinstaller appshelf.spec`，产物在 `dist/AppShelf/`。
 
-## 自定义
+### 方式二：本地服务（浏览器访问）
 
-- **改数据**：编辑 `data/apps.json`，每条格式：
-  ```json
-  { "name": "...", "category": "dev", "description": "...", "path": "C:\\..." }
-  ```
-- **类别取值**：`sys` / `dev` / `ai` / `off` / `net` / `game` / `lib`
-- **改配色**：编辑 `assets/style.css` 顶部的 `:root` CSS 变量
+```powershell
+python server.py        # 默认 http://localhost:8931
+```
+
+浏览器打开后功能与桌面 App 一致（编辑写回 apps.json、点击路径定位文件夹、定时扫描）。
+
+### 方式三：纯静态（只读浏览）
+
+把项目部署到任意静态托管（GitHub Pages 等），用 `python -m http.server` 之类打开 `index.html` 即可浏览、搜索、筛选。此模式下编辑会降级为保存到浏览器本地，「定位文件夹」不可用。
+
+## 功能
+
+- **目录视图**：编号 + logo + 名称 + 作用 + 路径 + 占用大小，衬线排版
+- **细分类**：21 个子类，点分类进入独立页面
+- **详情页**：点条目看完整介绍、逐条路径、来源与安装日期
+- **多版本合并**：同一软件的多个版本/副本（如多个 Geek、JDK 8/17）带 `×N` 徽标归为一族
+- **来源标注**：区分「系统自带」与「下载安装」，后者显示安装日期
+- **点击路径定位文件夹**：点路径文本直接在资源管理器中定位（本地模式）
+- **编辑**：弹窗修改任意字段，路径真实性校验——填了本机不存在的目录会报错拦截，保存直接写回 apps.json
+- **时效感知**：每 30 分钟对比注册表，新装的软件标「新发现」、被卸载的标「已卸载」灰显，等你确认
+- **搜索 / 盘符筛选**：关键词高亮、按 C/D/E/F 盘过滤、计数实时联动
+
+## 扫描与数据
+
+| 脚本 | 作用 |
+|---|---|
+| `scripts/scan.ps1` | 重新扫描注册表卸载项 |
+| `scripts/collect_dates.ps1` | 采集安装日期 |
+| `scripts/augment.py` | 重分类 + 来源 + 安装日期 + 生成 id |
+| `scripts/group.py` | 同族软件归组（多版本合并） |
+
+数据在 `data/apps.json`，每条：
+
+```json
+{
+  "id": "e4d37525", "name": "...", "category": "dev-ide",
+  "description": "...", "path": "D:\\...", "size": 4452984217,
+  "source": "downloaded", "installDate": "2026-06-14",
+  "group": "jdk", "site": "jetbrains.com"
+}
+```
+
+`status` 字段由扫描自动维护（`new` / `removed`），正常情况下不存在。
 
 ## 目录结构
 
 ```
 AppShelf/
-├── index.html          # 主页面
-├── assets/
-│   ├── style.css       # 样式（编辑 / 目录风）
-│   └── app.js          # 渲染、搜索、筛选、复制
-├── data/
-│   └── apps.json       # 应用数据
-├── scripts/
-│   └── scan.ps1        # 扫描本机生成 apps.json
-├── README.md
-└── .gitignore
+├── main.py             # 桌面 App 入口
+├── server.py           # 本地服务（静态 + API + 定时扫描）
+├── appshelf.spec       # PyInstaller 打包配置
+├── index.html          # 总目录页
+├── category.html       # 分类页
+├── detail.html         # 详情页
+├── assets/             # css + js
+├── data/apps.json      # 数据
+├── scripts/            # 扫描与数据处理脚本
+└── dist/AppShelf/      # 打包产物（含 AppShelf.exe）
 ```
 
 ## 设计
 
-- 暖白纸感背景 + 衬线大标题，印刷目录质感
-- 单一砖红强调色（编号、悬停色标），不堆渐变不发光
-- 路径完整等宽显示，悬停左侧出现细色标
+暖白纸感背景 + 衬线大标题，单一砖红强调色，不堆渐变不发光，印刷目录质感。
 
 ## License
 

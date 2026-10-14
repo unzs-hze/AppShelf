@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>分类 · AppShelf</title>
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body data-page="category">
+  <header class="masthead slim">
+    <div class="container">
+      <nav class="crumb" id="crumb"></nav>
+      <h1 class="cat-title" id="cat-title"></h1>
+      <p class="lede" id="cat-desc"></p>
+    </div>
+  </header>
+
+  <main class="container">
+    <div class="toolbar">
+      <label class="search">
+        <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+        <input id="q" type="search" placeholder="在本分类中搜索…" autocomplete="off">
+      </label>
+      <nav class="chips" id="chips" aria-label="全部分类"></nav>
+      <nav class="chips chips-drive" id="drive-chips" aria-label="盘符筛选"></nav>
+    </div>
+
+    <p class="result" id="result"></p>
+    <section class="catalog" id="catalog"></section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p><strong>AppShelf</strong> · <a href="index.html">返回总目录</a></p>
+    </div>
+  </footer>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="assets/app.js"></script>
+  <script src="assets/category.js"></script>
+</body>
+</html>
