@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>本机应用清单 · AppShelf</title>
+<meta name="description" content="把电脑里装的软件整理成一本目录：名称、作用、安装地址，可搜索可筛选。">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+  <header class="masthead">
+    <div class="container">
+      <p class="eyebrow">AppShelf &nbsp;·&nbsp; 本机应用清单</p>
+      <h1>本机安装应用目录</h1>
+      <p class="lede">一本可以翻的软件目录——装了什么、装在哪、做什么用，一目了然。</p>
+      <dl class="stats">
+        <div><dt id="stat-count">—</dt><dd>应用条目</dd></div>
+        <div><dt id="stat-cat">—</dt><dd>类别</dd></div>
+        <div><dt id="stat-reg">174</dt><dd>注册表程序项</dd></div>
+        <div><dt>4</dt><dd>涉及磁盘</dd></div>
+      </dl>
+    </div>
+  </header>
+
+  <main class="container">
+    <div class="toolbar">
+      <label class="search">
+        <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+        <input id="q" type="search" placeholder="搜索应用名称、作用或路径…" autocomplete="off">
+      </label>
+      <nav class="chips" id="chips" aria-label="类别筛选"></nav>
+    </div>
+
+    <p class="result" id="result"></p>
+    <section class="catalog" id="catalog"></section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p><strong>AppShelf</strong> · 纯静态、零依赖、离线可用。数据来自 <code>data/apps.json</code>，运行 <code>scripts/scan.ps1</code> 可重新扫描本机。</p>
+    </div>
+  </footer>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="assets/app.js"></script>
+</body>
+</html>
