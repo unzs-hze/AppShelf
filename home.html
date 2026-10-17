@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>首页 · AppShelf</title>
+<link rel="icon" type="image/x-icon" href="assets/appshelf.ico">
+<link rel="icon" type="image/png" sizes="512x512" href="assets/appshelf.png">
+<meta name="description" content="从 AppShelf 首页查看应用目录、今日前台使用时间与常用应用。">
+<link rel="stylesheet" href="assets/style.css">
+<link rel="stylesheet" href="assets/home.css?v=20261017-wide-home">
+</head>
+<body data-page="home">
+  <main class="container home-page">
+    <header class="home-intro">
+      <div class="home-welcome"><h1 id="home-greeting">你好。</h1><p class="home-date" id="home-date"></p></div>
+      <button class="home-refresh" id="home-refresh" type="button"><svg viewBox="0 0 20 20" width="15" height="15" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M16 7a6.5 6.5 0 1 0 .2 5M16 3v4h-4" stroke-linecap="round" stroke-linejoin="round"/></svg>刷新概览</button>
+    </header>
+
+    <figure class="home-poem" aria-label="古诗拾句">
+      <blockquote><p id="home-poem-text">长风破浪会有时，直挂云帆济沧海。</p></blockquote>
+      <figcaption><span id="home-poem-author">唐 · 李白</span><cite id="home-poem-title">《行路难·其一》</cite></figcaption>
+    </figure>
+
+    <nav class="home-entries" aria-label="概览与入口">
+      <a class="home-entry" href="index.html">
+        <div class="home-entry-heading"><span class="home-entry-icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="21" height="21" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M8 4v16M12 9h5M12 13h5" stroke-linecap="round"/></svg></span><h2>应用目录</h2><span class="home-entry-arrow" aria-hidden="true">↗</span></div>
+        <div class="home-entry-metric"><strong id="home-app-count">—</strong><span>款应用</span><span class="home-entry-side"><b id="home-category-count">—</b> 个分类</span></div>
+        <p class="home-entry-status" id="home-catalogue-status" role="status" aria-live="polite">正在读取应用目录…</p>
+      </a>
+      <a class="home-entry" href="usage.html">
+        <div class="home-entry-heading"><span class="home-entry-icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="21" height="21" fill="none" stroke="currentColor" stroke-width="1.4"><circle cx="12" cy="12" r="9"/><path d="M12 6v6l4 2" stroke-linecap="round" stroke-linejoin="round"/></svg></span><h2>使用时间</h2><span class="home-entry-arrow" aria-hidden="true">↗</span></div>
+        <div class="home-entry-metric home-time-metric"><strong id="home-usage-total">—</strong><span>今天</span></div>
+        <p class="home-entry-status" id="home-usage-status" role="status" aria-live="polite">正在读取今日记录…</p>
+      </a>
+    </nav>
+
+    <section class="home-activity" aria-labelledby="home-activity-title">
+      <div class="home-section-heading"><h2 id="home-activity-title">今日常用</h2><a href="usage.html">全部记录 <span aria-hidden="true">→</span></a></div>
+      <ol class="home-activity-list" id="home-activity-list"><li class="home-empty">正在读取今日记录…</li></ol>
+      <p class="home-activity-note">前台停留 · 熄屏或锁屏时暂停</p>
+    </section>
+    <noscript><p class="home-empty">开启 JavaScript 后可查看概览，也可以通过上方入口打开应用目录与使用时间页面。</p></noscript>
+  </main>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script src="assets/logos.js"></script>
+  <script src="assets/app.js"></script>
+  <script src="assets/home.js"></script>
+</body>
+</html>

@@ -1,0 +1,580 @@
+{
+  "asus armoury crate（华硕奥创中心）": {
+    "kind": "installed-program",
+    "file": "asus_framework.exe"
+  },
+  "armoury crate service 6.5.14": {
+    "kind": "installed-program",
+    "file": "ArmouryCrate.Service.exe"
+  },
+  "asus framework service 4.2.5.4": {
+    "kind": "installed-program",
+    "file": "asus_framework.exe"
+  },
+  "asus mb peripheral products": {
+    "kind": "installed-program",
+    "file": "AacTerminalHal.exe"
+  },
+  "gamesdk service 1.0.5": {
+    "kind": "installed-program",
+    "file": "GameSDK.exe"
+  },
+  "ai noise cancelation audio software 2.0.3": {
+    "kind": "installed-program",
+    "file": "Setup.exe"
+  },
+  "华硕大厅 1.2.9.3": {
+    "kind": "installed-program",
+    "file": "AsusMemberCenter.exe"
+  },
+  "nvidia 图形驱动程序 617.14": {
+    "kind": "installed-program",
+    "file": "NVI2.dll"
+  },
+  "nvidia app 11.0.5.420": {
+    "kind": "installed-program",
+    "file": "NVI2.dll"
+  },
+  "nvidia shadowplay 11.0.5.400": {
+    "kind": "installed-program",
+    "file": "NVI2.dll"
+  },
+  "nvidia hd 音频驱动程序 1.4.6.3": {
+    "kind": "installed-program",
+    "file": "NVI2.dll"
+  },
+  "nvidia virtual audio 4.65": {
+    "kind": "installed-program",
+    "file": "NVI2.dll"
+  },
+  "nvidia frameview sdk 1.5": {
+    "kind": "installed-program",
+    "file": "NVI2.dll"
+  },
+  "intellij idea 2026.1.3": {
+    "kind": "installed-program",
+    "file": "idea64.exe"
+  },
+  "pycharm 2026.1.2": {
+    "kind": "installed-program",
+    "file": "pycharm64.exe"
+  },
+  "visual studio code 1.131": {
+    "kind": "installed-program",
+    "file": "Code.exe"
+  },
+  "traecode cn 3.3.99": {
+    "kind": "installed-program",
+    "file": "Trae CN.exe"
+  },
+  "traework cn 0.2.2": {
+    "kind": "installed-program",
+    "file": "TRAE SOLO CN.exe"
+  },
+  "git 2.55.0.3": {
+    "kind": "installed-program",
+    "file": "git-for-windows.ico"
+  },
+  "python 3.14.5 (64-bit)": {
+    "kind": "installed-program",
+    "file": "python-3.14.5-amd64.exe"
+  },
+  "anaconda3 2023.03": {
+    "kind": "installed-program",
+    "file": "Anaconda3-2023.03-Windows-x86_64.exe"
+  },
+  "mysql workbench 8.0 ce": {
+    "kind": "installed-program",
+    "file": "MySQLWorkbenchDoc.ico"
+  },
+  "mysql shell": {
+    "kind": "installed-program",
+    "file": "mysqlsh.exe"
+  },
+  "navicat premium 16.2": {
+    "kind": "installed-program",
+    "file": "navicat.exe"
+  },
+  "dev-c++ 5.11": {
+    "kind": "installed-program",
+    "file": "devcpp.exe"
+  },
+  "hbuilderx": {
+    "kind": "installed-program",
+    "file": "HBuilderX.exe"
+  },
+  "comfy-desktop": {
+    "kind": "installed-program",
+    "file": "Comfy Desktop.exe"
+  },
+  "cisco packet tracer 6.1 instructor": {
+    "kind": "installed-program",
+    "file": "linguist.exe"
+  },
+  "ensp v1.3.00.200t": {
+    "kind": "installed-program",
+    "file": "eNSP_Client.exe"
+  },
+  "wireshark 2.6.6": {
+    "kind": "installed-program",
+    "file": "Wireshark.exe"
+  },
+  "winpcap 4.1.3": {
+    "kind": "installed-program",
+    "file": "uninstall.exe"
+  },
+  "wiztree 4.19": {
+    "kind": "installed-program",
+    "file": "WizTree.exe"
+  },
+  "geek uninstaller": {
+    "kind": "installed-program",
+    "file": "geek.exe"
+  },
+  "zcode 3.14.5": {
+    "kind": "installed-program",
+    "file": "uninstallerIcon.ico"
+  },
+  "商汤小浣熊 1.0.35": {
+    "kind": "installed-program",
+    "file": "uninstallerIcon.ico"
+  },
+  "chatbox 1.22.1": {
+    "kind": "installed-program",
+    "file": "Chatbox.exe"
+  },
+  "cc switch 3.19.1": {
+    "kind": "installed-program",
+    "file": "cc-switch.exe"
+  },
+  "antigravity tools 4.9.6": {
+    "kind": "installed-program",
+    "file": "antigravity-tools.exe"
+  },
+  "deepseek harness 0.2.0-rc.2": {
+    "kind": "installed-program",
+    "file": "DeepSeek Harness.exe"
+  },
+  "opencode": {
+    "kind": "installed-program",
+    "file": "OpenCode.exe"
+  },
+  "microsoft copilot 155.0": {
+    "kind": "installed-program",
+    "file": "copilotapp.exe"
+  },
+  "workbuddy 5.5.6": {
+    "kind": "installed-program",
+    "file": "WorkBuddy.exe"
+  },
+  "microsoft 365 - zh-cn 16.0.20430": {
+    "kind": "installed-program",
+    "file": "OfficeClickToRun.exe"
+  },
+  "microsoft onenote - zh-cn": {
+    "kind": "installed-program",
+    "file": "OfficeClickToRun.exe"
+  },
+  "微软 officeplus 3.16": {
+    "kind": "installed-program",
+    "file": "uninst.exe"
+  },
+  "microsoft onedrive 26.178": {
+    "kind": "installed-program",
+    "file": "OneDriveSetup.exe"
+  },
+  "wps office 教育版 12.1.0": {
+    "kind": "installed-program",
+    "file": "ksolaunch.exe"
+  },
+  "typora 0.9.96": {
+    "kind": "installed-program",
+    "file": "Typora.exe"
+  },
+  "notepad++ 7.6.3": {
+    "kind": "installed-program",
+    "file": "notepad++.exe"
+  },
+  "网易有道翻译 11.3.16": {
+    "kind": "installed-program",
+    "file": "YoudaoDict.exe"
+  },
+  "格式工厂 5.22": {
+    "kind": "installed-program",
+    "file": "FormatFactory.exe"
+  },
+  "网易云音乐 3.1.26": {
+    "kind": "installed-program",
+    "file": "cloudmusic.exe"
+  },
+  "clash verge 2.5.7": {
+    "kind": "installed-program",
+    "file": "clash-verge.exe"
+  },
+  "一元机场.vip 4.1.10": {
+    "kind": "installed-program",
+    "file": "一元机场.VIP.exe"
+  },
+  "google chrome 155": {
+    "kind": "installed-program",
+    "file": "chrome.exe"
+  },
+  "microsoft edge 155": {
+    "kind": "installed-program",
+    "file": "msedge.exe"
+  },
+  "microsoft edge webview2 runtime": {
+    "kind": "installed-program",
+    "file": "msedgewebview2.exe"
+  },
+  "百度网盘 8.8.8": {
+    "kind": "installed-program",
+    "file": "BaiduNetdisk.exe"
+  },
+  "腾讯会议 3.43.21": {
+    "kind": "installed-program",
+    "file": "WeMeetApp.exe"
+  },
+  "微信 4.1.5.16": {
+    "kind": "installed-program",
+    "file": "Weixin.exe"
+  },
+  "qq 9.9.19": {
+    "kind": "installed-program",
+    "file": "QQ.exe"
+  },
+  "抖音 8.7.0": {
+    "kind": "installed-program",
+    "file": "douyin.exe"
+  },
+  "steam 2.10.91": {
+    "kind": "installed-program",
+    "file": "uninstall.exe"
+  },
+  "wegame": {
+    "kind": "installed-program",
+    "file": "wegame.exe"
+  },
+  "rockstar games launcher 1.0.107": {
+    "kind": "installed-program",
+    "file": "Launcher.exe"
+  },
+  "epic游戏助手": {
+    "kind": "installed-program",
+    "file": "Gogo.exe"
+  },
+  "植物大战僵尸杂交版 2.0.88": {
+    "kind": "installed-program",
+    "file": "logo.ico"
+  },
+  "pico park: classic edition": {
+    "kind": "installed-program",
+    "file": "03190707446a3394e000bafee58da96581ed8721.ico"
+  },
+  "only up: brainrot together": {
+    "kind": "installed-program",
+    "file": "64269f5432d7a3d1d1a0695be5a1f1257e698a62.ico"
+  },
+  "wallpaper engine 壁纸引擎": {
+    "kind": "installed-program",
+    "file": "5b3bd0d9e5800b933245b5308089a688804787eb.ico"
+  },
+  "anticheatexpert (ace) 13.6": {
+    "kind": "installed-program",
+    "file": "ACE-Setup64.exe"
+  },
+  "easyanticheat": {
+    "kind": "installed-program",
+    "file": "EasyAntiCheat.exe"
+  },
+  "aomei backupper": {
+    "kind": "installed-program",
+    "file": "Backupper.exe"
+  },
+  "trae solo cn": {
+    "kind": "installed-program",
+    "file": "TRAE SOLO CN.exe",
+    "aliasOf": "traework cn 0.2.2"
+  },
+  "trae cn": {
+    "kind": "installed-program",
+    "file": "Trae CN.exe",
+    "aliasOf": "traecode cn 3.3.99"
+  },
+  "python launcher": {
+    "kind": "installed-program",
+    "file": "py.exe"
+  },
+  "cockpit tools": {
+    "kind": "installed-program",
+    "file": "cockpit-tools.exe"
+  },
+  "mysql installer": {
+    "kind": "installed-program",
+    "file": "MySQLInstaller.exe"
+  },
+  "mysql documents": {
+    "kind": "publisher-icon",
+    "site": "mysql.com"
+  },
+  "天选姬 4.9.0": {
+    "kind": "installed-program",
+    "file": "TX Mascot.ico"
+  },
+  "无畏契约助手": {
+    "kind": "installed-program",
+    "file": "无畏契约助手卸载.exe"
+  },
+  "商汤小浣熊": {
+    "kind": "installed-program",
+    "file": "uninstallerIcon.ico"
+  },
+  "anticheatexpert": {
+    "kind": "installed-program",
+    "file": "ACE-Setup64.exe"
+  },
+  "armoury crate service": {
+    "kind": "installed-program",
+    "file": "ArmouryCrate.Service.exe"
+  },
+  "clash verge": {
+    "kind": "installed-program",
+    "file": "clash-verge.exe"
+  },
+  "git": {
+    "kind": "installed-program",
+    "file": "git-for-windows.ico"
+  },
+  "微软officeplus": {
+    "kind": "installed-program",
+    "file": "uninst.exe"
+  },
+  "premiumsoft navicat premium 16.2": {
+    "kind": "installed-program",
+    "file": "navicat.exe"
+  },
+  "microsoft 365 - zh-cn": {
+    "kind": "installed-program",
+    "file": "OfficeClickToRun.exe"
+  },
+  "wallpaper engine：壁纸引擎": {
+    "kind": "installed-program",
+    "file": "5b3bd0d9e5800b933245b5308089a688804787eb.ico"
+  },
+  "pico park:classic edition": {
+    "kind": "installed-program",
+    "file": "03190707446a3394e000bafee58da96581ed8721.ico"
+  },
+  "腾讯会议": {
+    "kind": "installed-program",
+    "file": "WeMeetApp.exe"
+  },
+  "wiztree v4.19": {
+    "kind": "installed-program",
+    "file": "WizTree.exe"
+  },
+  "microsoft visual c++ 2010  x64 redistributable - 10.0.40219": {
+    "kind": "installed-program",
+    "file": "vcredist_x64.exe"
+  },
+  "microsoft visual c++ 2008 redistributable - x64 9.0.30729.6161": {
+    "kind": "installed-program",
+    "file": "vcredist_x64.exe"
+  },
+  "java se development kit 8 update 131 (64-bit)": {
+    "kind": "installed-program",
+    "file": "java.exe"
+  },
+  "node.js": {
+    "kind": "installed-program",
+    "file": "node.exe"
+  },
+  "nvidia physx 系统软件 9.26.0703": {
+    "kind": "installed-program",
+    "file": "A_Ball_Trans.ico"
+  },
+  "nvidia frameview sdk 1.5.11504.36206172": {
+    "kind": "installed-program",
+    "file": "NVI2.dll"
+  },
+  "cc switch": {
+    "kind": "installed-program",
+    "file": "cc-switch.exe"
+  },
+  "华硕大厅": {
+    "kind": "installed-program",
+    "file": "AsusMemberCenter.exe"
+  },
+  "dev-c++": {
+    "kind": "installed-program",
+    "file": "devcpp.exe"
+  },
+  "抖音": {
+    "kind": "installed-program",
+    "file": "douyin.exe"
+  },
+  "google chrome": {
+    "kind": "installed-program",
+    "file": "chrome.exe"
+  },
+  "wps office 教育版 (12.1.0.28043)": {
+    "kind": "installed-program",
+    "file": "ksolaunch.exe"
+  },
+  "copilot": {
+    "kind": "installed-program",
+    "file": "copilotapp.exe"
+  },
+  "microsoft edge": {
+    "kind": "installed-program",
+    "file": "msedge.exe"
+  },
+  "notepad++ (32-bit x86)": {
+    "kind": "installed-program",
+    "file": "notepad++.exe"
+  },
+  "qq": {
+    "kind": "installed-program",
+    "file": "QQ.exe"
+  },
+  "rockstar games launcher": {
+    "kind": "installed-program",
+    "file": "Launcher.exe"
+  },
+  "rockstar games sdk": {
+    "kind": "installed-program",
+    "file": "uninstallRGSCRedistributable.exe"
+  },
+  "steam": {
+    "kind": "installed-program",
+    "file": "uninstall.exe"
+  },
+  "微信": {
+    "kind": "installed-program",
+    "file": "Weixin.exe"
+  },
+  "wireshark 2.6.6 64-bit": {
+    "kind": "installed-program",
+    "file": "Wireshark.exe"
+  },
+  "gamesdk service": {
+    "kind": "installed-program",
+    "file": "GameSDK.exe"
+  },
+  "microsoft visual c++ 2013 redistributable (x64) - 12.0.30501": {
+    "kind": "installed-program",
+    "file": "vcredist_x64.exe"
+  },
+  "microsoft visual c++ v14 redistributable (x64) - 14.51.36247": {
+    "kind": "installed-program",
+    "file": "VC_redist.x64.exe"
+  },
+  "microsoft visual c++ v14 redistributable (x86) - 14.50.35719": {
+    "kind": "installed-program",
+    "file": "VC_redist.x64.exe"
+  },
+  "asus framework service": {
+    "kind": "installed-program",
+    "file": "asus_framework.exe"
+  },
+  "microsoft visual c++ 2012 redistributable (x86) - 11.0.61030": {
+    "kind": "installed-program",
+    "file": "vcredist_x64.exe"
+  },
+  "microsoft visual c++ 2008 redistributable - x86 9.0.30729.6161": {
+    "kind": "installed-program",
+    "file": "vcredist_x64.exe"
+  },
+  "ai noise cancelation audio software": {
+    "kind": "installed-program",
+    "file": "Setup.exe"
+  },
+  "microsoft visual c++ 2012 redistributable (x64) - 11.0.61030": {
+    "kind": "installed-program",
+    "file": "vcredist_x64.exe"
+  },
+  "microsoft .net runtime - 8.0.21 (x64)": {
+    "kind": "installed-program",
+    "file": "dotnet-runtime-8.0.21-win-x64.exe"
+  },
+  "microsoft visual c++ 2010  x86 redistributable - 10.0.40219": {
+    "kind": "installed-program",
+    "file": "vcredist_x64.exe"
+  },
+  "aura service": {
+    "kind": "installed-program",
+    "file": "AuraServiceSetup.exe"
+  },
+  "microsoft visual c++ 2013 redistributable (x86) - 12.0.30501": {
+    "kind": "installed-program",
+    "file": "vcredist_x64.exe"
+  },
+  "无畏契约": {
+    "kind": "installed-program",
+    "file": "无畏契约卸载.exe"
+  },
+  "格式工厂": {
+    "kind": "installed-program",
+    "file": "FormatFactory.exe"
+  },
+  "百度网盘": {
+    "kind": "installed-program",
+    "file": "BaiduNetdisk.exe"
+  },
+  "网易云音乐": {
+    "kind": "installed-program",
+    "file": "cloudmusic.exe"
+  },
+  "网易有道翻译": {
+    "kind": "installed-program",
+    "file": "YoudaoDict.exe"
+  },
+  "antigravity tools": {
+    "kind": "installed-program",
+    "file": "antigravity-tools.exe"
+  },
+  "opencode 1.18.35": {
+    "kind": "installed-program",
+    "file": "OpenCode.exe"
+  },
+  "comfy desktop 1.1.6": {
+    "kind": "installed-program",
+    "file": "Comfy Desktop.exe"
+  },
+  "progress telerik fiddler classic": {
+    "kind": "installed-program",
+    "file": "App.ico"
+  },
+  "microsoft onedrive": {
+    "kind": "installed-program",
+    "file": "OneDriveSetup.exe"
+  },
+  "microsoft visual studio code (user)": {
+    "kind": "installed-program",
+    "file": "Code.exe"
+  },
+  "traework cn (user)": {
+    "kind": "installed-program",
+    "file": "TRAE SOLO CN.exe"
+  },
+  "traecode cn (user)": {
+    "kind": "installed-program",
+    "file": "Trae CN.exe"
+  },
+  "antigravity cockpit": {
+    "kind": "installed-program",
+    "file": "cockpit-tools.exe"
+  },
+  "windows media player legacy": {
+    "kind": "installed-program",
+    "file": "wmplayer.exe"
+  },
+  "wordpad": {
+    "kind": "installed-program",
+    "file": "wordpad.exe"
+  },
+  "idle (python 3.14 64-bit)": {
+    "kind": "installed-program",
+    "file": "pythonw.exe"
+  }
+}

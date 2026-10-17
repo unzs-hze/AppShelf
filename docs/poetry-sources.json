@@ -1,0 +1,29 @@
+{
+  "tang300": {
+    "collection": "唐诗三百首",
+    "url": "https://github.com/chinese-poetry/chinese-poetry/blob/master/蒙学/tangshisanbaishou.json",
+    "sha256": "8423b65d938d0327e369972e790549b42609fa7ac4a2a72df59f4cb5a49c08f8"
+  },
+  "qianjia": {
+    "collection": "千家诗",
+    "url": "https://github.com/chinese-poetry/chinese-poetry/blob/master/蒙学/qianjiashi.json",
+    "sha256": "cf34d01ed29528052da5d96543e725ab67814a6cb093183808c889400ff62417"
+  },
+  "shuimo": {
+    "collection": "水墨唐诗",
+    "url": "https://github.com/chinese-poetry/chinese-poetry/blob/master/水墨唐诗/shuimotangshi.json",
+    "sha256": "e175adf044f015cd7283d96a793eedde89a2847f567ecd58cd8d605a7ce69f8a"
+  },
+  "selection": {
+    "count": 1000,
+    "uniqueBy": "Chinese text without punctuation",
+    "method": "Complete couplets, at most four per source work, balanced across anthology works",
+    "conversion": "OpenCC 0.1.7 t2s; trailing variant notes omitted; couplet punctuation and a small set of variant glyphs normalized",
+    "outputSHA256": "0c407303482531a68ccd097cfee49a7cf14a8b377103c4200f05caefa8ab9d4f",
+    "sourceCounts": {
+      "tang300": 604,
+      "qianjia": 299,
+      "shuimo": 97
+    }
+  }
+}

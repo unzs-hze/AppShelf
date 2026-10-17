@@ -4,48 +4,58 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>本机应用清单 · AppShelf</title>
+<link rel="icon" type="image/x-icon" href="assets/appshelf.ico">
+<link rel="icon" type="image/png" sizes="512x512" href="assets/appshelf.png">
 <meta name="description" content="把电脑里装的软件整理成一本目录：名称、作用、安装地址、占用与来源，可搜索可筛选可编辑。">
 <link rel="stylesheet" href="assets/style.css">
 </head>
 <body data-page="index">
-  <header class="masthead">
+  <header class="masthead" id="library-header">
     <div class="container">
-      <p class="eyebrow">AppShelf &nbsp;·&nbsp; 本机应用清单</p>
-      <h1>本机安装应用目录</h1>
-      <p class="lede">一本可以翻的软件目录——装了什么、装在哪、做什么用、占多大，一目了然。</p>
+      <div id="library-overview">
+      <h1>本机应用目录</h1>
       <dl class="stats">
         <div><dt id="stat-count">—</dt><dd>应用条目</dd></div>
         <div><dt id="stat-cat">—</dt><dd>子类分区</dd></div>
         <div><dt id="stat-dl">—</dt><dd>下载安装</dd></div>
-        <div><dt id="stat-size">—</dt><dd>合计占用</dd></div>
+        <div><dt id="stat-size">—</dt><dd title="逐条相加，共享目录可能重复计算，不代表实际磁盘占用">记录体积（可能重叠）</dd></div>
       </dl>
+      </div>
+      <div id="library-category" hidden>
+        <div class="page-navigation">
+          <a class="back-button" id="back-link" href="index.html" aria-label="返回全部应用" title="返回全部应用"></a>
+          <nav class="crumb" id="crumb" aria-label="当前位置"></nav>
+        </div>
+        <h1 class="cat-title" id="cat-title"></h1>
+        <p class="lede" id="cat-desc"></p>
+      </div>
     </div>
   </header>
 
   <main class="container">
-    <nav class="crumb" id="crumb" hidden></nav>
-    <div class="toolbar">
-      <label class="search">
-        <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
-        <input id="q" type="search" placeholder="搜索应用名称、作用或路径…" autocomplete="off">
-      </label>
-      <nav class="chips" id="chips" aria-label="分类（点击进入独立页面）"></nav>
-      <nav class="chips chips-drive" id="drive-chips" aria-label="盘符筛选"></nav>
+    <div class="library-layout">
+      <aside class="category-panel" aria-label="应用分类">
+        <div class="category-panel-head"><h2>分类浏览</h2><span>应用目录</span></div>
+        <nav class="category-nav" id="chips" aria-label="选择应用分类"></nav>
+      </aside>
+      <div class="library-content">
+        <section class="toolbar" aria-label="搜索与位置筛选">
+          <div class="filter-row">
+            <div class="location-filter" id="drive-chips"></div>
+            <p class="filter-help">分类与安装位置可组合筛选</p>
+          </div>
+        </section>
+        <p class="result" id="result" aria-live="polite"></p>
+        <section class="catalog" id="catalog"></section>
+      </div>
     </div>
-
-    <p class="result" id="result"></p>
-    <section class="catalog" id="catalog"></section>
   </main>
-
-  <footer>
-    <div class="container">
-      <p><strong>AppShelf</strong> · 数据来自 <code>data/apps.json</code>。本地编辑：<code>python server.py</code> 后可在页面直接修改并写回；<code>scripts/scan.ps1</code> 可重新扫描本机。</p>
-    </div>
-  </footer>
 
   <div class="toast" id="toast" role="status" aria-live="polite"></div>
 
+  <script src="assets/logos.js"></script>
   <script src="assets/app.js"></script>
+  <script src="assets/library.js"></script>
   <script src="assets/index.js"></script>
 </body>
 </html>

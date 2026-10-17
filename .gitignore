@@ -8,3 +8,8 @@ dist/
 build/
 __pycache__/
 scripts/installdate.json
+*.tmp
+*.bak
+*.lock
+local-data/
+scripts/apps.json

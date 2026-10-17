@@ -1,0 +1,2 @@
+# Desktop runtime; the browser service uses only the Python standard library.
+pywebview>=6.2,<7

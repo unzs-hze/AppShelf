@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>使用时间 · AppShelf</title>
+<link rel="icon" type="image/x-icon" href="assets/appshelf.ico">
+<link rel="icon" type="image/png" sizes="512x512" href="assets/appshelf.png">
+<meta name="description" content="查看电脑应用的真实前台使用时间，按日、周、月了解时间分布。">
+<link rel="stylesheet" href="assets/style.css">
+<link rel="stylesheet" href="assets/usage.css?v=20261017-clean-ranking">
+</head>
+<body data-page="usage">
+  <header class="usage-header">
+    <div class="container">
+      <div class="usage-title-row">
+        <h1>使用时间</h1>
+        <div class="usage-tracker" id="usage-tracker" role="status"><span class="tracking-dot"></span><span id="tracking-label">正在连接记录</span></div>
+      </div>
+      <p class="usage-quote" id="usage-quote"></p>
+    </div>
+  </header>
+
+  <main class="container usage-page">
+    <section class="usage-controls" aria-label="选择统计周期">
+      <div class="usage-periods" role="group" aria-label="统计周期">
+        <button class="usage-period is-active" type="button" data-period="day" aria-pressed="true">日</button>
+        <button class="usage-period" type="button" data-period="week" aria-pressed="false">周</button>
+        <button class="usage-period" type="button" data-period="month" aria-pressed="false">月</button>
+      </div>
+      <div class="usage-calendar">
+        <button class="usage-icon-button" id="usage-previous" type="button" aria-label="上一个周期" title="上一个周期">‹</button>
+        <label class="usage-date-label"><span class="sr-only">统计日期</span><input id="usage-date" type="date" aria-label="统计日期"></label>
+        <button class="usage-icon-button" id="usage-next" type="button" aria-label="下一个周期" title="下一个周期">›</button>
+        <button class="usage-today" id="usage-today" type="button">回到今天</button>
+      </div>
+      <button class="usage-refresh" id="usage-refresh" type="button"><svg viewBox="0 0 20 20" width="15" height="15" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M16 7a6.5 6.5 0 1 0 .2 5M16 3v4h-4" stroke-linecap="round" stroke-linejoin="round"/></svg>刷新</button>
+    </section>
+
+    <div class="usage-message" id="usage-message" role="status" hidden><span id="usage-message-text"></span><button id="usage-retry" type="button">重试</button></div>
+    <div class="usage-view" id="usage-view" aria-busy="true">
+      <div class="usage-section-label"><h2 id="usage-range">今天</h2><span id="usage-updated" aria-live="polite">正在读取记录…</span></div>
+      <section class="usage-summary" aria-label="使用概况">
+        <div class="usage-summary-item summary-total"><span class="summary-label">前台使用</span><strong class="summary-value" id="usage-total">—</strong></div>
+        <div class="usage-summary-item summary-count"><strong id="usage-app-count">—</strong><span class="summary-label">款应用</span></div>
+        <div class="usage-summary-item summary-top"><span class="summary-label">最常用</span><span class="logo" id="usage-top-logo" hidden></span><strong id="usage-top-name">—</strong><span class="summary-detail" id="usage-top-time">等待记录</span></div>
+      </section>
+
+      <section class="usage-panel usage-chart-panel" aria-labelledby="usage-chart-heading">
+        <div class="usage-panel-head"><h2 id="usage-chart-heading">时间分布</h2><div class="usage-chart-tools"><span id="usage-chart-subtitle">按小时</span><div class="usage-chart-types" role="group" aria-label="图表形式"><button class="usage-chart-type is-active" type="button" data-chart="line" aria-pressed="true">折线</button><button class="usage-chart-type" type="button" data-chart="bar" aria-pressed="false">柱状</button></div></div></div>
+        <div class="usage-chart" id="usage-chart"><p class="usage-pending">正在读取记录…</p></div>
+      </section>
+
+      <section class="usage-panel usage-ranking" aria-labelledby="usage-ranking-heading">
+        <div class="usage-panel-head"><h2 id="usage-ranking-heading">应用排行</h2><span id="usage-ranking-count"></span></div>
+        <ol class="usage-app-list" id="usage-app-list"><li class="usage-pending">正在读取记录…</li></ol>
+        <p class="usage-ranking-note">短时长保留可见刻度，准确时长见右侧。</p>
+      </section>
+    </div>
+
+    <aside class="usage-footnote" aria-label="记录说明">
+      <div class="usage-background-setting"><label><input id="usage-background-toggle" type="checkbox" role="switch" disabled><span>后台记录与登录自启</span></label><span id="usage-background-status" role="status">正在读取设置…</span><button id="usage-background-retry" type="button" hidden>重试</button></div>
+      <p>亮屏且软件位于前台时计时，阅读、观看和等待回复也会记录；熄屏、锁屏或睡眠时暂停。开启后台记录后，关闭窗口仍继续统计；关闭开关后，仅窗口打开时记录。每 5 秒更新，记录保存在本机，不补算历史时间。<span id="usage-since"></span></p>
+    </aside>
+    <p class="usage-search-note" id="usage-search-note" hidden>应用目录暂时无法读取，全局搜索暂不可用。使用时间记录仍可正常查看。</p>
+  </main>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script src="assets/logos.js"></script>
+  <script src="assets/app.js"></script>
+  <script src="assets/usage.js?v=20261017-clean-ranking"></script>
+</body>
+</html>

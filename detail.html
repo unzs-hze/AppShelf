@@ -4,12 +4,17 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>详情 · AppShelf</title>
+<link rel="icon" type="image/x-icon" href="assets/appshelf.ico">
+<link rel="icon" type="image/png" sizes="512x512" href="assets/appshelf.png">
 <link rel="stylesheet" href="assets/style.css">
 </head>
 <body data-page="detail">
   <header class="masthead slim">
     <div class="container">
-      <nav class="crumb" id="crumb"></nav>
+      <div class="page-navigation">
+        <a class="back-button" id="back-link" href="index.html" aria-label="返回全部应用" title="返回全部应用"></a>
+        <nav class="crumb" id="crumb" aria-label="当前位置"></nav>
+      </div>
     </div>
   </header>
 
@@ -17,14 +22,9 @@
     <section class="catalog" id="catalog"></section>
   </main>
 
-  <footer>
-    <div class="container">
-      <p><strong>AppShelf</strong> · <a href="index.html">返回总目录</a></p>
-    </div>
-  </footer>
-
   <div class="toast" id="toast" role="status" aria-live="polite"></div>
 
+  <script src="assets/logos.js"></script>
   <script src="assets/app.js"></script>
   <script src="assets/detail.js"></script>
 </body>

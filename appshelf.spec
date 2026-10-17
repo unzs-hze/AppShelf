@@ -8,11 +8,13 @@ a = Analysis(
     binaries=[],
     datas=[
         ("index.html", "."),
+        ("home.html", "."),
         ("category.html", "."),
         ("detail.html", "."),
+        ("usage.html", "."),
         ("assets", "assets"),
         ("data", "data"),
-        ("server.py", "."),
+        ("docs/licenses/chinese-poetry-MIT.txt", "licenses"),
     ],
     hiddenimports=["webview", "webview.platforms.winforms", "clr"],
     hookspath=[],
@@ -29,7 +31,7 @@ exe = EXE(
     strip=False,
     upx=True,
     console=False,          # 无控制台窗口
-    icon=None,
+    icon=os.path.join(ROOT, "assets", "appshelf.ico"),
 )
 coll = COLLECT(
     exe, a.binaries, a.zipfiles, a.datas,

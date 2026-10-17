@@ -1,0 +1,2 @@
+# Optional icon-cache developer tools; not needed to run or package cached logos.
+Pillow>=10,<13
